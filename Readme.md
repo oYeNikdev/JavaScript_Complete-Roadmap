@@ -41,4 +41,3 @@
         let result = 100 * 200;
         console.timeEnd("Calculation");
         Output: calculation (execution time) ms
-

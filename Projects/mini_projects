@@ -1,0 +1,13 @@
+const member = {
+    name: "Sherya",
+    age: 20,
+    monthlyFee: 1500,
+    isActive: true,
+    profilePicture: null
+}
+
+console.log(member.name);
+console.log(member.age);
+console.log(member.monthlyFee);
+console.log(member.isActive);
+console.log(member.profilePicture);

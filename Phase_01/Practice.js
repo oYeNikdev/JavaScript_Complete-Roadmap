@@ -27,6 +27,11 @@ const memeberName = "Sherya";
 const email = "sherya@example.com";
 const city = "Lucknow";
 
+let a = 2300;
+let b = "1300";
+
+console.log(typeof a);
+console.log(typeof b);
 // Real world use
 // User Registration
 // Login Forms

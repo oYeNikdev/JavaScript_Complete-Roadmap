@@ -90,3 +90,30 @@ console.log(typeof isActive);
 
 // One javascript surprice
 console.log(typeof null); // Output: "object" (this is a known quirk in JavaScript)
+
+// Lesson 3 - JavaScript Operators
+// building gym management application.
+
+// A gym memeber:
+// Pays 1400 monthly 
+// Takes a 3-month memebership
+// Gets a 10% discount
+// Needs to know the final amount
+
+
+// 1. Arithmetic operators
+// These operators perform mathematical calculations.
+// Operator	Meaning	Example	Result
+// +	Addition	10 + 5	15
+// -	Subtraction	10 - 5	5
+// *	Multiplication	10 * 5	50
+// /	Division	10 / 5	2
+// %	Remainder	10 % 3	1
+// **	Power	2 ** 3	8
+
+// Real World: Gym Billing 
+const amonthlyFee = 1400;
+const amonths = 3;
+
+const totalAmount = amonthlyFee * amonths;
+ console.log(totalAmount);

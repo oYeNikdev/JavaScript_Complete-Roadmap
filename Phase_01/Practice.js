@@ -117,3 +117,58 @@ const amonths = 3;
 
 const totalAmount = amonthlyFee * amonths;
  console.log(totalAmount);
+
+//  2. Assignment Operators = use for assign and update values
+
+let balance = 1000;
+balance += 500;
+console.log(balance);
+// balance means balance = balance + 500;
+
+let amount = 100;
+amount -= 45;
+amount *= 2;
+amount /= 5;
+console.log(amount);
+
+// usedin
+// Updating shopping cart totals
+// Increasing Product Quantities
+// Updating account balances
+// Tracking likes and followers
+
+// 3. Comparison Operators
+// Imagine a login system 
+// A user enters their age. Your application needs to check wheather they are old enough to register.
+
+const age1 = 22;
+
+console.log(age1 > 18); //true
+console.log(age <18); // False
+console.log(age >= 18); // true
+console.log(age <= 18); // false
+console.log(age == 18); // false
+console.log(age != 18); // true
+
+
+// Three important operators:
+
+// | Operator | Meaning | Example |
+// |---|---|---|
+// | && | AND | Both conditions must be true |
+// | || | OR | At least one condition must be true |
+// | ! | NOT | Reverses a Boolean value |
+
+// 5 Increment and Decrement: These are commonly used in counters.
+
+let likes = 10;
+likes++; 
+console.log(likes);
+likes--;
+console.log(likes);
+
+// Used:
+// Like buttons
+// Product quantity
+// Page counters
+// Notification counts

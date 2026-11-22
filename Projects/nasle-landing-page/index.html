@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NASLÉ natural mineral water, infused with bright fruit flavour.">
+    <title>NASLÉ - Naturally Flavoured Mineral Water</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#" aria-label="NASLÉ home">NASLÉ</a>
+
+        <nav class="nav" aria-label="Main navigation">
+            <a href="#flavours">Flavours</a>
+            <a href="#story">Our story</a>
+            <a href="#stockists">Stockists</a>
+        </nav>
+
+        <button class="bag-button" type="button" aria-label="Shopping bag, 0 items">
+            Bag <span class="bag-count">0</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero" id="flavours">
+            <div class="hero-copy">
+                <p class="eyebrow">Natural mineral water</p>
+                <h1>Feel good.<br>Drink bright.</h1>
+                <p class="intro">Mineral water with a clean lift of real fruit flavour. Zero sugar. Zero noise.</p>
+
+                <div class="purchase-row">
+                    <button class="add-button" type="button">
+                        <span>Add to bag</span>
+                        <span class="price">$28</span>
+                    </button>
+                    <p class="pack-note">12 × 330 ml</p>
+                </div>
+            </div>
+
+            <div class="product-stage" aria-live="polite">
+                <div class="halo"></div>
+                <div class="bottle">
+                    <div class="bottle-cap"></div>
+                    <div class="bottle-neck"></div>
+                    <div class="bottle-body">
+                        <div class="bottle-label">
+                            <span class="label-brand">NASLÉ</span>
+                            <span class="label-flavour">Citrus<br>Minéral</span>
+                            <span class="label-detail">330 ml · Natural</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flavour-picker" role="group" aria-label="Choose a flavour">
+                    <button class="flavour-option active" type="button" data-flavour="Citrus" data-colour="#F6C84A" aria-label="Citrus flavour" aria-pressed="true">
+                        <span class="swatch citrus"></span>
+                    </button>
+                    <button class="flavour-option" type="button" data-flavour="Berry" data-colour="#D86C7D" aria-label="Berry flavour" aria-pressed="false">
+                        <span class="swatch berry"></span>
+                    </button>
+                    <button class="flavour-option" type="button" data-flavour="Peach" data-colour="#E99A72" aria-label="Peach flavour" aria-pressed="false">
+                        <span class="swatch peach"></span>
+                    </button>
+                    <button class="flavour-option" type="button" data-flavour="Yuzu" data-colour="#AFCB66" aria-label="Yuzu flavour" aria-pressed="false">
+                        <span class="swatch yuzu"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="marquee" aria-label="Product benefits">
+            <div class="marquee-track">
+                <span>Natural minerals</span><i></i>
+                <span>Real fruit flavour</span><i></i>
+                <span>Zero sugar</span><i></i>
+                <span>Lightly sparkling</span><i></i>
+                <span>Natural minerals</span><i></i>
+                <span>Real fruit flavour</span><i></i>
+            </div>
+        </section>
+
+        <section class="story" id="story">
+            <p class="section-number">01 / THE SOURCE</p>
+            <h2>Simple ingredients.<br>Exceptional water.</h2>
+            <p>Drawn from a protected spring, bottled with care, and finished with just enough natural fruit essence.</p>
+        </section>
+
+        <section class="stockists" id="stockists">
+            <p>Find NASLÉ near you</p>
+            <a href="mailto:hello@nasle.com">Become a stockist <span>↗</span></a>
+        </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite">Added to your bag</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

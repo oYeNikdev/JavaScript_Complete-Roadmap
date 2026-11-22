@@ -301,6 +301,59 @@ h1 {
     border-color: var(--ink);
 }
 
+.sale-section {
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: 58% 42%;
+    align-items: center;
+    padding: 48px 9vw;
+    background: #dce8b6;
+    border-top: 1px solid var(--line);
+}
+
+.sale-copy .eyebrow {
+    margin-bottom: 16px;
+}
+
+.sale-copy h2 {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(52px, 6vw, 88px);
+    line-height: 0.9;
+    letter-spacing: -5px;
+}
+
+.sale-details {
+    max-width: 380px;
+    justify-self: end;
+}
+
+.sale-details > p {
+    margin: 0 0 28px;
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+.sale-button {
+    width: 260px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+    border: 1px solid var(--ink);
+    border-radius: 100px;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.sale-button:hover {
+    transform: translateY(-3px);
+    background: var(--ink);
+    color: var(--paper);
+}
+
 .swatch {
     width: 28px;
     height: 28px;
@@ -465,6 +518,16 @@ h1 {
     .story {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    .sale-section {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        padding: 64px 7vw;
+    }
+
+    .sale-details {
+        justify-self: start;
     }
 
     .story > p:last-child {

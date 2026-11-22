@@ -5,6 +5,8 @@ const bagCount = document.querySelector(".bag-count");
 const bagButton = document.querySelector(".bag-button");
 const addButton = document.querySelector(".add-button");
 const saleButton = document.querySelector(".sale-button");
+const packageActions = document.querySelector(".package-actions");
+const packageOutput = document.querySelector(".package-output");
 const toast = document.querySelector(".toast");
 
 let itemCount = 0;
@@ -38,3 +40,14 @@ flavourOptions.forEach((option) => {
 
 addButton.addEventListener("click", addToBag);
 saleButton.addEventListener("click", addToBag);
+
+packageActions.addEventListener("click", (event) => {
+    const lostPackageButton = event.target.closest("[data-lost-package]");
+
+    if (!lostPackageButton) {
+        return;
+    }
+
+    const packageNumber = lostPackageButton.dataset.lostPackage;
+    packageOutput.textContent = `Package #${packageNumber} lost`;
+});

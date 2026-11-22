@@ -418,6 +418,51 @@ h1 {
     line-height: 1.6;
 }
 
+.package-log {
+    min-height: 240px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 48px 9vw;
+    border-top: 1px solid var(--line);
+}
+
+.package-log .eyebrow {
+    margin-bottom: 12px;
+}
+
+.package-log h2 {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(36px, 4vw, 60px);
+    letter-spacing: -3px;
+}
+
+.package-actions button {
+    min-width: 220px;
+    height: 54px;
+    padding: 0 20px;
+    border: 1px solid var(--ink);
+    border-radius: 100px;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.package-actions button:hover {
+    transform: translateY(-3px);
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.package-output {
+    grid-column: 1 / -1;
+    min-height: 24px;
+    margin: 0;
+    font-size: 14px;
+}
+
 .stockists {
     height: 220px;
     display: flex;
@@ -532,6 +577,15 @@ h1 {
 
     .story > p:last-child {
         justify-self: start;
+    }
+
+    .package-log {
+        grid-template-columns: 1fr;
+        padding: 54px 7vw;
+    }
+
+    .package-output {
+        grid-column: 1;
     }
 
     .stockists {

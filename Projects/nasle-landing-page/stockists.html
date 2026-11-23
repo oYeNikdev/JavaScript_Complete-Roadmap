@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a NASLÉ Stockist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="NASLÉ home">NASLÉ</a>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="product.html">Flavours</a>
+            <a href="index.html#story">Our story</a>
+            <a href="stockists.html" aria-current="page">Stockists</a>
+        </nav>
+        <button class="bag-button" type="button" aria-label="Shopping bag">
+            Bag <span class="bag-count">0</span>
+        </button>
+    </header>
+
+    <main id="main-content">
+        <section class="stockist-page">
+            <div class="stockist-copy">
+                <p class="eyebrow">Wholesale enquiries</p>
+                <h1>Stock<br>something bright.</h1>
+            </div>
+
+            <form class="stockist-form" novalidate>
+                <label>
+                    Business name
+                    <input type="text" name="business" autocomplete="organization" required minlength="2">
+                </label>
+                <label>
+                    Email address
+                    <input type="email" name="email" autocomplete="email" required>
+                </label>
+                <label>
+                    Location
+                    <input type="text" name="location" autocomplete="address-level2" required minlength="2">
+                </label>
+                <button type="submit">Send enquiry</button>
+                <p class="form-output" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

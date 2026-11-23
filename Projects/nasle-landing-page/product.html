@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASLÉ Flavours</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="NASLÉ home">NASLÉ</a>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="product.html" aria-current="page">Flavours</a>
+            <a href="index.html#story">Our story</a>
+            <a href="stockists.html">Stockists</a>
+        </nav>
+        <button class="bag-button" type="button" aria-label="Shopping bag">
+            Bag <span class="bag-count">0</span>
+        </button>
+    </header>
+
+    <main id="main-content">
+        <section class="page-heading">
+            <p class="eyebrow">The collection</p>
+            <h1>Find your<br>bright side.</h1>
+        </section>
+
+        <section class="product-grid" aria-label="NASLÉ flavours">
+            <article class="product-card citrus-card">
+                <span>01</span>
+                <h2>Citrus</h2>
+                <p>Dry, bright and refreshingly sharp.</p>
+                <button class="product-add" type="button" data-product="Citrus">Add Citrus — $28</button>
+            </article>
+            <article class="product-card berry-card">
+                <span>02</span>
+                <h2>Berry</h2>
+                <p>Soft, ripe and lightly tart.</p>
+                <button class="product-add" type="button" data-product="Berry">Add Berry — $28</button>
+            </article>
+            <article class="product-card peach-card">
+                <span>03</span>
+                <h2>Peach</h2>
+                <p>Juicy, mellow and gently floral.</p>
+                <button class="product-add" type="button" data-product="Peach">Add Peach — $28</button>
+            </article>
+            <article class="product-card yuzu-card">
+                <span>04</span>
+                <h2>Yuzu</h2>
+                <p>Citrus, garden fresh and vivid.</p>
+                <button class="product-add" type="button" data-product="Yuzu">Add Yuzu — $28</button>
+            </article>
+        </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite">Added to your bag</div>
+    <script src="script.js"></script>
+</body>
+</html>

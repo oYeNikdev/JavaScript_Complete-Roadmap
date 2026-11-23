@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
         <a class="brand" href="#" aria-label="NASLÉ home">NASLÉ</a>
 
         <nav class="nav" aria-label="Main navigation">
-            <a href="#flavours">Flavours</a>
+            <a href="product.html">Flavours</a>
             <a href="#story">Our story</a>
-            <a href="#stockists">Stockists</a>
+            <a href="stockists.html">Stockists</a>
         </nav>
 
         <button class="bag-button" type="button" aria-label="Shopping bag, 0 items">
@@ -25,7 +26,7 @@
         </button>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero" id="flavours">
             <div class="hero-copy">
                 <p class="eyebrow">Natural mineral water</p>
@@ -108,7 +109,11 @@
                 <h2 id="package-log-title">Lost a delivery?</h2>
             </div>
             <div class="package-actions" aria-label="Lost package options">
+                <button type="button" data-lost-package="1">Log Package #1 lost</button>
+                <button type="button" data-lost-package="2">Log Package #2 lost</button>
+                <button type="button" data-lost-package="3">Log Package #3 lost</button>
                 <button type="button" data-lost-package="4">Log Package #4 lost</button>
+                <button type="button" data-lost-package="5">Log Package #5 lost</button>
             </div>
             <p class="package-output" role="status" aria-live="polite"></p>
         </section>

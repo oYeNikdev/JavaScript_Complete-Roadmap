@@ -12,16 +12,36 @@ const toast = document.querySelector(".toast");
 let itemCount = 0;
 let toastTimer;
 
+try {
+    itemCount = Number.parseInt(localStorage.getItem("nasleBagCount") || "0", 10);
+} catch (error) {
+    itemCount = 0;
+}
+
+if (!Number.isFinite(itemCount) || itemCount < 0) {
+    itemCount = 0;
+}
+
+bagCount.textContent = itemCount;
+bagButton.setAttribute("aria-label", `Shopping bag, ${itemCount} items`);
+
 function addToBag() {
     itemCount += 1;
     bagCount.textContent = itemCount;
     bagButton.setAttribute("aria-label", `Shopping bag, ${itemCount} items`);
+    try {
+        localStorage.setItem("nasleBagCount", itemCount);
+    } catch (error) {
+        // The bag still works for this session if storage is unavailable.
+    }
 
-    toast.classList.add("visible");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => {
-        toast.classList.remove("visible");
-    }, 1800);
+    if (toast) {
+        toast.classList.add("visible");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+            toast.classList.remove("visible");
+        }, 1800);
+    }
 }
 
 flavourOptions.forEach((option) => {
@@ -38,16 +58,48 @@ flavourOptions.forEach((option) => {
     });
 });
 
-addButton.addEventListener("click", addToBag);
-saleButton.addEventListener("click", addToBag);
+if (addButton) {
+    addButton.addEventListener("click", addToBag);
+}
 
-packageActions.addEventListener("click", (event) => {
-    const lostPackageButton = event.target.closest("[data-lost-package]");
+if (saleButton) {
+    saleButton.addEventListener("click", addToBag);
+}
 
-    if (!lostPackageButton) {
-        return;
-    }
-
-    const packageNumber = lostPackageButton.dataset.lostPackage;
-    packageOutput.textContent = `Package #${packageNumber} lost`;
+document.querySelectorAll(".product-add").forEach((button) => {
+    button.addEventListener("click", addToBag);
 });
+
+if (packageActions) {
+    packageActions.addEventListener("click", (event) => {
+        const lostPackageButton = event.target.closest("[data-lost-package]");
+
+        if (!lostPackageButton) {
+            return;
+        }
+
+        const packageNumber = lostPackageButton.dataset.lostPackage;
+        packageOutput.textContent = `Package #${packageNumber} lost`;
+    });
+}
+
+const stockistForm = document.querySelector(".stockist-form");
+
+if (stockistForm) {
+    const formOutput = stockistForm.querySelector(".form-output");
+
+    stockistForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (!stockistForm.checkValidity()) {
+            formOutput.textContent = "Please complete all fields with valid details.";
+            stockistForm.reportValidity();
+            return;
+        }
+
+        const formData = new FormData(stockistForm);
+        const businessName = formData.get("business").trim();
+        formOutput.textContent = `Thank you, ${businessName}. Your enquiry has been received.`;
+        stockistForm.reset();
+    });
+}

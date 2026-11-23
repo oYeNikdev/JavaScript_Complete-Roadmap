@@ -26,6 +26,28 @@ a {
     font: inherit;
 }
 
+.skip-link {
+    position: fixed;
+    z-index: 100;
+    top: 12px;
+    left: 12px;
+    padding: 10px 14px;
+    border-radius: 4px;
+    background: var(--ink);
+    color: var(--paper);
+    transform: translateY(-160%);
+    transition: transform 180ms ease;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+:focus-visible {
+    outline: 3px solid #1f70ff;
+    outline-offset: 4px;
+}
+
 .site-header {
     height: 86px;
     display: grid;
@@ -440,7 +462,7 @@ h1 {
 }
 
 .package-actions button {
-    min-width: 220px;
+    min-width: 180px;
     height: 54px;
     padding: 0 20px;
     border: 1px solid var(--ink);
@@ -461,6 +483,123 @@ h1 {
     min-height: 24px;
     margin: 0;
     font-size: 14px;
+}
+
+.page-heading {
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 9vw;
+}
+
+.page-heading h1,
+.stockist-copy h1 {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(64px, 9vw, 120px);
+    line-height: 0.86;
+    letter-spacing: -7px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.product-card {
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border-top: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+}
+
+.product-card > span {
+    font-size: 12px;
+}
+
+.product-card h2 {
+    margin: auto 0 12px;
+    font-family: "Manrope", sans-serif;
+    font-size: 48px;
+    letter-spacing: -3px;
+}
+
+.product-card p {
+    min-height: 48px;
+}
+
+.product-card button {
+    height: 50px;
+    border: 1px solid var(--ink);
+    border-radius: 100px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.citrus-card { background: #f6c84a; }
+.berry-card { background: #d86c7d; }
+.peach-card { background: #e99a72; }
+.yuzu-card { background: #afcb66; }
+
+.stockist-page {
+    min-height: calc(100vh - 86px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.stockist-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 9vw;
+    background: #dce8b6;
+}
+
+.stockist-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    padding: 70px 9vw;
+}
+
+.stockist-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.stockist-form input {
+    height: 52px;
+    border: 0;
+    border-bottom: 1px solid var(--ink);
+    border-radius: 0;
+    background: transparent;
+    color: var(--ink);
+    font: inherit;
+}
+
+.stockist-form button {
+    height: 54px;
+    border: 1px solid var(--ink);
+    border-radius: 100px;
+    background: var(--ink);
+    color: var(--paper);
+    cursor: pointer;
+}
+
+.form-output {
+    min-height: 24px;
+    margin: 0;
 }
 
 .stockists {
@@ -588,6 +727,14 @@ h1 {
         grid-column: 1;
     }
 
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stockist-page {
+        grid-template-columns: 1fr;
+    }
+
     .stockists {
         height: auto;
         min-height: 260px;
@@ -627,5 +774,21 @@ h1 {
 
     .story h2 {
         letter-spacing: -3px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-heading,
+    .stockist-copy,
+    .stockist-form {
+        padding: 54px 7vw;
+    }
+
+    .page-heading h1,
+    .stockist-copy h1 {
+        font-size: 60px;
+        letter-spacing: -4px;
     }
 }
